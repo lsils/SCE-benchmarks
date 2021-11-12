@@ -24,19 +24,19 @@ Constant | 2 | 1 |
 
 Depending on how the registers are implemented, there can be different assumptions on whether primary inputs (PIs) and primary outputs (POs) need to be path-balanced and whether PIs need to be branched.
 
-## Benchmarks suites and best results
+## Benchmark suites and best results
 Different benchmark suites and best optimization results under various technology assumptions are collected in this repository.
 
 ### MCNC benchmarks
-These benchmarks are used for experiments in [2,4,5]. The initial MIG circuits were obtained by ...
+These benchmarks are used for experiments in [2,3,5]. The initial MIG circuits were obtained by ...
 
 ### ISCAS'85 benchmarks
-These benchmarks are used for experiments in [1,3]. We obtained the original benchmarks from the authors of [3].
+These benchmarks are used for experiments in [1,4]. We obtained the original benchmarks from the authors of [3].
 
 ## References
 1. "A Buffer and Splitter Insertion Framework for Adiabatic Quantum-Flux-Parametron Superconducting Circuits" by Ruizhe Cai, Olivia Chen, Ao Ren, Ning Liu, Nobuyuki Yoshikawa, and Yanzhi Wang (ICCD 2019).
 1. "Algebraic and Boolean Optimization Methods for AQFP Superconducting Circuits" by Eleonora Testa, Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (ASP-DAC 2021). 
-1. "An Optimal Algorithm for Splitter and Buffer Insertion in Adiabatic Quantum-Flux-Parametron Circuits" by Chao-Yuan Huang, Yi-Chen Chang, Ming-Jer Tsai, and Tsung-Yi Ho (ICCAD 2021).
 1. "Irredundant Buffer and Splitter Insertion and Scheduling-Based Optimization for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (IWLS 2021).
+1. "An Optimal Algorithm for Splitter and Buffer Insertion in Adiabatic Quantum-Flux-Parametron Circuits" by Chao-Yuan Huang, Yi-Chen Chang, Ming-Jer Tsai, and Tsung-Yi Ho (ICCAD 2021).
 1. "Optimizing Adiabatic Quantum-Flux-Parametron (AQFP) Circuits using an Exact Database" by Dewmini Sudara Marakkalage, Heinz Riener, and Giovanni De Micheli (NANOARCH 2021).
 
