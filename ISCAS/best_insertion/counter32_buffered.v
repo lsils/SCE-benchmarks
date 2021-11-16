@@ -1,7 +1,7 @@
 module top( in_6_ , in_15_ , in_13_ , in_14_ , in_2_ , in_10_ , in_24_ , in_8_ , in_22_ , in_20_ , in_7_ , in_25_ , in_5_ , in_4_ , in_23_ , in_27_ , in_1_ , in_0_ , in_16_ , in_30_ , in_26_ , in_12_ , in_11_ , in_17_ , in_19_ , in_18_ , in_21_ , in_31_ , in_29_ , in_28_ , in_9_ , in_3_ , out_2_ , out_1_ , out_3_ , out_0_ , out_5_ , out_4_ );
   input in_6_ , in_15_ , in_13_ , in_14_ , in_2_ , in_10_ , in_24_ , in_8_ , in_22_ , in_20_ , in_7_ , in_25_ , in_5_ , in_4_ , in_23_ , in_27_ , in_1_ , in_0_ , in_16_ , in_30_ , in_26_ , in_12_ , in_11_ , in_17_ , in_19_ , in_18_ , in_21_ , in_31_ , in_29_ , in_28_ , in_9_ , in_3_ ;
   output out_2_ , out_1_ , out_3_ , out_0_ , out_5_ , out_4_ ;
-  wire n33 , n41 , n45 , n47 , n49 , n55 , n57 , n59 , n63 , n65 , n67 , n73 , n75 , n77 , n81 , n87 , n89 , n91 , n101 , n103 , n105 , n107 , n109 , n111 , n113 , n121 , n125 , n127 , n129 , n135 , n137 , n139 , n143 , n145 , n147 , n153 , n155 , n157 , n161 , n167 , n169 , n171 , n181 , n183 , n185 , n187 , n189 , n191 , n193 , n194 , n195 , n197 , n199 , n201 , n203 , n205 , n210 , n211 , n212 , n215 , n217 , n224 , n230 , n232 , n234 , n240 , n242 , n244 , n245 , n246 , n248 , n253 , n254 , n255 , n256 , n258 , n261 , n262 , n263 , n266 , n267 , n268 ;
+  wire n33 , n41 , n45 , n47 , n49 , n55 , n57 , n59 , n63 , n65 , n67 , n73 , n75 , n77 , n81 , n87 , n89 , n91 , n101 , n103 , n105 , n107 , n109 , n111 , n113 , n121 , n125 , n127 , n129 , n135 , n137 , n139 , n143 , n145 , n147 , n153 , n155 , n157 , n161 , n167 , n169 , n171 , n181 , n183 , n185 , n187 , n189 , n191 , n193 , n194 , n195 , n197 , n199 , n201 , n203 , n205 , n210 , n211 , n212 , n215 , n217 , n224 , n230 , n232 , n234 , n240 , n242 , n244 , n245 , n246 , n248 , n253 , n254 , n255 , n256 , n258 , n261 , n262 , n263 , n265 , n266 , n267 ;
   assign n33 = in_29_ | in_28_ ;
   buffer buf_n34( .i (n33), .o (n34) );
   buffer buf_n35( .i (n34), .o (n35) );
@@ -230,19 +230,18 @@ module top( in_6_ , in_15_ , in_13_ , in_14_ , in_2_ , in_10_ , in_24_ , in_8_ ,
   assign n258 = ( n229 & n239 ) | ( n229 & n257 ) | ( n239 & n257 ) ;
   buffer buf_n259( .i (n258), .o (n259) );
   buffer buf_n260( .i (n259), .o (n260) );
-  assign n261 = n225 | n235 ;
-  assign n262 = n225 & n235 ;
+  assign n261 = n226 | n236 ;
+  assign n262 = n226 & n236 ;
   assign n263 = n261 & ~n262 ;
   buffer buf_n264( .i (n263), .o (n264) );
-  buffer buf_n265( .i (n264), .o (n265) );
-  assign n266 = n257 & n265 ;
-  assign n267 = n257 | n265 ;
-  assign n268 = ~n266 & n267 ;
-  buffer buf_n269( .i (n268), .o (n269) );
+  assign n265 = n257 & n264 ;
+  assign n266 = n257 | n264 ;
+  assign n267 = ~n265 & n266 ;
+  buffer buf_n268( .i (n267), .o (n268) );
   assign out_2_ = n214 ;
   assign out_1_ = n223 ;
   assign out_3_ = n255 ;
   assign out_0_ = 1'b0 ;
   assign out_5_ = n260 ;
-  assign out_4_ = n269 ;
+  assign out_4_ = n268 ;
 endmodule
