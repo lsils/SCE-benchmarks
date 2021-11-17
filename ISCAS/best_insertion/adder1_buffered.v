@@ -1,7 +1,15 @@
+module buffer( i , o );
+  input i ;
+  output o ;
+endmodule
+module inverter( i , o );
+  input i ;
+  output o ;
+endmodule
 module top( a , b , c , cout , s );
   input a , b , c ;
   output cout , s ;
-  wire n11 , n17 , n19 , n21 , n23 , n24 , n26 ;
+  wire n4 , n5 , n6 , n7 , n8 , n9 , n10 , n11 , n12 , n13 , n14 , n15 , n16 , n17 , n18 , n19 , n20 , n21 , n22 , n23 , n24 , n25 , n26 ;
   buffer buf_n4( .i (a), .o (n4) );
   buffer buf_n5( .i (b), .o (n5) );
   assign n11 = n4 & n5 ;

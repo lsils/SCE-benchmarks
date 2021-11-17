@@ -1,7 +1,15 @@
+module buffer( i , o );
+  input i ;
+  output o ;
+endmodule
+module inverter( i , o );
+  input i ;
+  output o ;
+endmodule
 module top( N1 , N2 , N3 , N6 , N7 , N22 , N23 );
   input N1 , N2 , N3 , N6 , N7 ;
   output N22 , N23 ;
-  wire n13 , n16 , n18 , n19 , n20 , n22 ;
+  wire n6 , n7 , n8 , n9 , n10 , n11 , n12 , n13 , n14 , n15 , n16 , n17 , n18 , n19 , n20 , n21 , n22 , n23 ;
   buffer buf_n6( .i (N1), .o (n6) );
   buffer buf_n10( .i (N3), .o (n10) );
   assign n13 = n6 & n10 ;
