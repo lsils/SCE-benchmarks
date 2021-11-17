@@ -47,7 +47,7 @@ endmodule
 Also, change the main module name to `top`, and remove any comment with the `/* ... */` syntax.
 
 ### Modification to `mockturtle`
-Update `mockturtle` to at least newer than commit [a future commit] (PR #[not merged yet]).
+Update `mockturtle` to at least newer than commit [36a0a90](https://github.com/lsils/mockturtle/commit/36a0a907a2b60cd6201f0530f5da22d99b42e7ca) (PR #506).
 
 Insert the following code into `mockturtle/io/verilog_reader.hpp`, at the end of function `on_module_instantiation`, before `else fmt::print( stderr, "[e] unknown module name {}\n", module_name );` (at about line 389).
 ```c++
