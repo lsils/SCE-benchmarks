@@ -1,8 +1,33 @@
 # MCNC benchmarks
 
-TODO: How did we obtained the initial benchmarks?
+The initial MIG circuits were obtained by first mapping into 4-LUT networks using ABC command `&if -a -K 4`, then rewriting each LUT with optimum MIGs looked up in a database, and finally restricting the fanout size of each node to at most 16. (See Section 3.1 of [2].)
 
-### Optimization of **MCNC** benchmarks for Adiabatic Quantum Flux Parametreon (AQFP) 
+## Assumption: \{true, true, true, 4\}
+
+### Buffer and splitter insertion results without logic optimization [6]
+
+| benchmark |  #B/S |  #JJs | depth |
+| --------- | ----- | ----- | ----- |
+|      5xp1 |   175 |  1046 |    16 |
+|     c1908 |  2524 |  7334 |    59 |
+|      c432 |  2110 |  5264 |    64 |
+|     c5315 |  8834 | 25288 |    56 |
+|      c880 |  2187 |  6174 |    41 |
+|      chkn |  1107 |  4740 |    36 |
+|     count |   650 |  2014 |    25 |
+|      dist |   706 |  4622 |    27 |
+|       in5 |   950 |  4558 |    29 |
+|       in6 |   823 |  3866 |    23 |
+|        k2 |  3862 | 19454 |    40 |
+|        m3 |   531 |  3528 |    22 |
+|    max512 |   939 |  6156 |    27 |
+|    misex3 |  2649 | 14490 |    37 |
+|      mlp4 |   569 |  3910 |    26 |
+|     prom2 |  4628 | 30118 |    32 |
+|      sqr6 |   218 |  1264 |    19 |
+|      x1dn |   366 |  1644 |    19 |
+
+### Logic optimization results considering buffer and splitter costs [5]
 
 In the following, we present the optimized results for MCNC benchmarks considering majority-3 gates in the netlist under the assumption that neither path-balancing nor branching is required for PIs, but POs need to be path-balanced.
 
@@ -49,5 +74,3 @@ mlp4 | 10 | 2998 |
 prom2 | 13 | 24586 |
 sqr6 | 7 | 902 |
 x1dn | 10 | 1010 |
-
-The presented results are from the work "Optimizing Adiabatic Quantum-Flux-Parametron (AQFP) Circuits using an Exact Database" by Dewmini Sudara Marakkalage, Heinz Riener, and Giovanni De Micheli. (NANOARCH 2021)
