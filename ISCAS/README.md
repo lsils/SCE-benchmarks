@@ -183,6 +183,33 @@ These benchmarks were generated (optimized) by the authors of [1] using Yosys. W
 |   sorter48 |  784 |  6848 |    34 |
 |      alu32 | 6020 | 21118 |   169 |
 
+## Assumption: \{true, true, true, 3\}
+
+|  benchmark |  #B/S |  #JJs | depth |
+| ---------- | ----- | ----- | ----- |
+|     adder1 |    16 |    74 |     8 |
+|     adder8 |   371 |  1204 |    33 |
+|      mult8 |  1884 |  6402 |    71 |
+|  counter16 |    72 |   318 |    18 |
+|  counter32 |   176 |   844 |    25 |
+|  counter64 |   393 |  1956 |    32 |
+| counter128 |   841 |  4250 |    40 |
+|        c17 |    12 |    60 |     5 |
+|       c432 |   948 |  2622 |    41 |
+|       c499 |  1386 |  5094 |    33 |
+|       c880 |  1782 |  5400 |    42 |
+|      c1355 |  1400 |  5134 |    33 |
+|      c1908 |  1494 |  4722 |    40 |
+|      c2670 |  2328 |  6864 |    32 |
+|      c3540 |  2501 |  9766 |    59 |
+|      c5315 |  6610 | 21032 |    45 |
+|      c6288 |  9914 | 31048 |   180 |
+|      c7552 |  9520 | 27404 |    70 |
+|   sorter32 |   480 |  3840 |    30 |
+|   sorter48 |   880 |  7040 |    35 |
+|      alu32 | 15131 | 39340 |   173 |
+
+
 ### Buffer and splitter insertion results without logic optimization [7]
 
-
+TODO...
