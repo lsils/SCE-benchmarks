@@ -19,7 +19,7 @@ Splitter (1-to-2, 1-to-3, 1-to-4) | 2 | 1 |
 2-input AND | 6 | 1 |
 2-input OR  | 6 | 1 |
 
-**Different technology assumptions**
+## Different technology assumptions
 
 Depending on how the registers are implemented, there can be different assumptions on whether primary inputs (PIs) and primary outputs (POs) need to be path-balanced and whether PIs need to be branched. Also, splitter cells of different splitting capacities may be available.
 
@@ -42,14 +42,25 @@ struct aqfp_assumptions
 ```
 Whenever assumptions are made and mentioned in this repository, they are listed as the ordered values of the above list. For example, \{true, true, false, 4\} means PIs are branched, PIs are balanced, POs are not balanced, and splitters have max fanout of 4.
 
-## Benchmark suites and best results
+## Benchmark suites
 Different benchmark suites and best optimization results under various technology assumptions are collected in this repository.
 
 ### MCNC benchmarks
-These benchmarks are used for experiments in [2,3,5]. The initial MIG circuits were obtained by first mapping into 4-LUT networks using ABC command `&if -a -K 4`, then rewriting each LUT with optimum MIGs looked up in a database, and finally restricting the fanout size of each node to at most 16. (See Section 3.1 of [2].)
+These benchmarks are used for experiments in [2,3,5,6]. The initial MIG circuits were obtained by first mapping into 4-LUT networks using ABC command `&if -a -K 4`, then rewriting each LUT with optimum MIGs looked up in a database, and finally restricting the fanout size of each node to at most 16. (See Section 3.1 of [2].)
 
 ### ISCAS'85 benchmarks
-These benchmarks are used for experiments in [1,4,6]. We obtained the original benchmarks from the authors of [3].
+These benchmarks are used for experiments in [1,4,7]. We obtained the original benchmarks from the authors of [3].
+
+## Types of best results
+There are two types of "best AQFP results" presented in this repository. 
+
+**Buffer and splitter insertion without logic optimization**
+Without any logic optimization, i.e., without changing the interconnections of logic gates, buffers and splitters are inserted into the network to legalize them for AQFP. These results were obtained by adopting the better initial scheduling among ASAP and ALAP, and then running the chunked-movement heuristic optimization until convergence. [7] The implementation is available in `mockturtle` in header [`buffer_insertion`](https://github.com/lsils/mockturtle/blob/master/include/mockturtle/algorithms/aqfp/buffer_insertion.hpp).
+
+The buffer insertion results can be verified using the [`buffer_verification`](https://github.com/lsils/mockturtle/blob/master/include/mockturtle/algorithms/aqfp/buffer_verification.hpp) algorithm in `mockturtle`.
+
+**Logic optimization results considering buffer and splitter costs**
+In this category, there is no restriction on the methods used as long as the resulting circuit is functionally equivalent to the original one and is legal with respect to the AQFP constraints. Various algorithms, including technology-independent or -dependent logic optimization, buffer insertion, and post-insertion optimization, can be applied and interleaved. 
 
 ## References
 1. "A Buffer and Splitter Insertion Framework for Adiabatic Quantum-Flux-Parametron Superconducting Circuits" by Ruizhe Cai, Olivia Chen, Ao Ren, Ning Liu, Nobuyuki Yoshikawa, and Yanzhi Wang (ICCD 2019).
@@ -57,5 +68,6 @@ These benchmarks are used for experiments in [1,4,6]. We obtained the original b
 1. "Irredundant Buffer and Splitter Insertion and Scheduling-Based Optimization for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (IWLS 2021).
 1. "An Optimal Algorithm for Splitter and Buffer Insertion in Adiabatic Quantum-Flux-Parametron Circuits" by Chao-Yuan Huang, Yi-Chen Chang, Ming-Jer Tsai, and Tsung-Yi Ho (ICCAD 2021).
 1. "Optimizing Adiabatic Quantum-Flux-Parametron (AQFP) Circuits using an Exact Database" by Dewmini Sudara Marakkalage, Heinz Riener, and Giovanni De Micheli (NANOARCH 2021).
+1. "Majority-based Design Flow for AQFP Superconducting Family" by Giulia Meuli, Vinicius Possani, Rajinder Singh, Siang-Yun Lee, Alessandro Tempia Calvino, Dewmini Sudara Marakkalage, Patrick Vuillod, Luca Amaru, Scott Chase, Jamil Kawa, and Giovanni De Micheli (DATE 2022).
 1. "Beyond Local Optimality of Buffer and Splitter Insertion for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (DAC 2022).
 

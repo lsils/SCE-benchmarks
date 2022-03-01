@@ -4,7 +4,7 @@ The initial MIG circuits were obtained by first mapping into 4-LUT networks usin
 
 ## Assumption: \{true, true, true, 4\}
 
-### Buffer and splitter insertion results without logic optimization [6]
+### Buffer and splitter insertion results without logic optimization [7]
 
 | benchmark |  #B/S |  #JJs | depth |
 | --------- | ----- | ----- | ----- |
