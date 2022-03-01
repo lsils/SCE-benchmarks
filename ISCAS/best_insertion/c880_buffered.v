@@ -266,7 +266,7 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   buffer buf_n723( .i (n722), .o (n723) );
   buffer buf_n724( .i (n723), .o (n724) );
   buffer buf_n725( .i (n724), .o (n725) );
-  buffer buf_n726( .i (n725), .o (n726) );
+  inverter inv_n726( .i (n725), .o (n726) );
   buffer buf_n447( .i (N59), .o (n447) );
   assign n727 = n447 & n457 ;
   buffer buf_n728( .i (n727), .o (n728) );
@@ -307,7 +307,7 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   buffer buf_n763( .i (n762), .o (n763) );
   buffer buf_n764( .i (n763), .o (n764) );
   buffer buf_n765( .i (n764), .o (n765) );
-  buffer buf_n766( .i (n765), .o (n766) );
+  inverter inv_n766( .i (n765), .o (n766) );
   assign n767 = n432 & n447 ;
   buffer buf_n768( .i (n767), .o (n768) );
   assign n769 = n461 & n768 ;
@@ -347,7 +347,7 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   buffer buf_n803( .i (n802), .o (n803) );
   buffer buf_n804( .i (n803), .o (n804) );
   buffer buf_n805( .i (n804), .o (n805) );
-  buffer buf_n806( .i (n805), .o (n806) );
+  inverter inv_n806( .i (n805), .o (n806) );
   assign n807 = n435 & n768 ;
   buffer buf_n808( .i (n807), .o (n808) );
   buffer buf_n809( .i (n808), .o (n809) );
@@ -385,7 +385,7 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   buffer buf_n841( .i (n840), .o (n841) );
   buffer buf_n842( .i (n841), .o (n842) );
   buffer buf_n843( .i (n842), .o (n843) );
-  buffer buf_n844( .i (n843), .o (n844) );
+  inverter inv_n844( .i (n843), .o (n844) );
   buffer buf_n464( .i (N90), .o (n464) );
   buffer buf_n465( .i (n464), .o (n465) );
   assign n845 = N87 | N88 ;
@@ -463,7 +463,7 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   buffer buf_n917( .i (n916), .o (n917) );
   buffer buf_n918( .i (n917), .o (n918) );
   buffer buf_n919( .i (n918), .o (n919) );
-  buffer buf_n920( .i (n919), .o (n920) );
+  inverter inv_n920( .i (n919), .o (n920) );
   buffer buf_n437( .i (N51), .o (n437) );
   buffer buf_n438( .i (n437), .o (n438) );
   buffer buf_n439( .i (n438), .o (n439) );
@@ -2024,12 +2024,12 @@ module top( N1 , N101 , N106 , N111 , N116 , N121 , N126 , N13 , N130 , N135 , N
   assign N390 = n603 ;
   assign N391 = n644 ;
   assign N418 = n686 ;
-  assign N419 = ~n726 ;
-  assign N420 = ~n766 ;
-  assign N421 = ~n806 ;
-  assign N422 = ~n844 ;
+  assign N419 = n726 ;
+  assign N420 = n766 ;
+  assign N421 = n806 ;
+  assign N422 = n844 ;
   assign N423 = n885 ;
-  assign N446 = ~n920 ;
+  assign N446 = n920 ;
   assign N447 = n958 ;
   assign N448 = n1001 ;
   assign N449 = n1042 ;

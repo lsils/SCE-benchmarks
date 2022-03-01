@@ -1459,7 +1459,7 @@ module top( G1 , G10 , G100 , G101 , G102 , G103 , G104 , G105 , G106 , G107 , G
   buffer buf_n184( .i (n183), .o (n184) );
   buffer buf_n185( .i (n184), .o (n185) );
   buffer buf_n186( .i (n185), .o (n186) );
-  buffer buf_n187( .i (n186), .o (n187) );
+  inverter inv_n187( .i (n186), .o (n187) );
   buffer buf_n527( .i (G135), .o (n527) );
   buffer buf_n528( .i (n527), .o (n528) );
   buffer buf_n529( .i (n528), .o (n529) );
@@ -2180,7 +2180,7 @@ module top( G1 , G10 , G100 , G101 , G102 , G103 , G104 , G105 , G106 , G107 , G
   buffer buf_n2414( .i (n2413), .o (n2414) );
   buffer buf_n2415( .i (n2414), .o (n2415) );
   buffer buf_n2416( .i (n2415), .o (n2416) );
-  buffer buf_n2417( .i (n2416), .o (n2417) );
+  inverter inv_n2417( .i (n2416), .o (n2417) );
   assign n2418 = n352 & ~n2374 ;
   buffer buf_n2419( .i (n351), .o (n2419) );
   buffer buf_n2420( .i (n2419), .o (n2420) );
@@ -2486,7 +2486,7 @@ module top( G1 , G10 , G100 , G101 , G102 , G103 , G104 , G105 , G106 , G107 , G
   buffer buf_n2631( .i (n2630), .o (n2631) );
   buffer buf_n2632( .i (n2631), .o (n2632) );
   buffer buf_n2633( .i (n2632), .o (n2633) );
-  assign n2634 = n2620 | n2633 ;
+  assign n2634 = ~n2620 & ~n2633 ;
   assign n2635 = n164 & ~n1457 ;
   buffer buf_n2636( .i (n2635), .o (n2636) );
   buffer buf_n2637( .i (n2636), .o (n2637) );
@@ -2509,7 +2509,7 @@ module top( G1 , G10 , G100 , G101 , G102 , G103 , G104 , G105 , G106 , G107 , G
   buffer buf_n2654( .i (n2653), .o (n2654) );
   buffer buf_n2655( .i (n2654), .o (n2655) );
   buffer buf_n2656( .i (n2655), .o (n2656) );
-  buffer buf_n2657( .i (n2656), .o (n2657) );
+  inverter inv_n2657( .i (n2656), .o (n2657) );
   assign G2531 = n294 ;
   assign G2532 = n294 ;
   assign G2533 = n294 ;
@@ -2560,18 +2560,18 @@ module top( G1 , G10 , G100 , G101 , G102 , G103 , G104 , G105 , G106 , G107 , G
   assign G2578 = n2007 ;
   assign G2579 = n2007 ;
   assign G2580 = n2039 ;
-  assign G2581 = ~n187 ;
+  assign G2581 = n187 ;
   assign G2582 = 1'b0 ;
   assign G2583 = 1'b0 ;
   assign G2584 = n2360 ;
   assign G2585 = n2360 ;
   assign G2586 = n2393 ;
-  assign G2587 = ~n2417 ;
+  assign G2587 = n2417 ;
   assign G2588 = n2438 ;
   assign G2589 = n2438 ;
   assign G2590 = 1'b0 ;
-  assign G2591 = ~n2634 ;
+  assign G2591 = n2634 ;
   assign G2592 = 1'b0 ;
-  assign G2593 = ~n2657 ;
-  assign G2594 = ~n2657 ;
+  assign G2593 = n2657 ;
+  assign G2594 = n2657 ;
 endmodule

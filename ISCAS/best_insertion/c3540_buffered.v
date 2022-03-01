@@ -72,7 +72,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n739( .i (n738), .o (n739) );
   buffer buf_n740( .i (n739), .o (n740) );
   buffer buf_n741( .i (n740), .o (n741) );
-  buffer buf_n742( .i (n741), .o (n742) );
+  inverter inv_n742( .i (n741), .o (n742) );
   buffer buf_n92( .i (G11), .o (n92) );
   buffer buf_n93( .i (n92), .o (n93) );
   buffer buf_n94( .i (n93), .o (n94) );
@@ -135,7 +135,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n791( .i (n790), .o (n791) );
   buffer buf_n792( .i (n791), .o (n792) );
   buffer buf_n793( .i (n792), .o (n793) );
-  buffer buf_n794( .i (n793), .o (n794) );
+  inverter inv_n794( .i (n793), .o (n794) );
   buffer buf_n51( .i (G1), .o (n51) );
   buffer buf_n52( .i (n51), .o (n52) );
   buffer buf_n53( .i (n52), .o (n53) );
@@ -295,7 +295,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n880( .i (n879), .o (n880) );
   buffer buf_n881( .i (n880), .o (n881) );
   buffer buf_n882( .i (n881), .o (n882) );
-  buffer buf_n883( .i (n882), .o (n883) );
+  inverter inv_n883( .i (n882), .o (n883) );
   assign n884 = n382 | n390 ;
   assign n885 = n382 & n390 ;
   assign n886 = n884 & ~n885 ;
@@ -1529,7 +1529,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n1948( .i (n1947), .o (n1948) );
   buffer buf_n1949( .i (n1948), .o (n1949) );
   buffer buf_n1950( .i (n1949), .o (n1950) );
-  buffer buf_n1951( .i (n1950), .o (n1951) );
+  inverter inv_n1951( .i (n1950), .o (n1951) );
   assign n1952 = n1199 & n1607 ;
   buffer buf_n1953( .i (n1952), .o (n1953) );
   buffer buf_n1954( .i (n1953), .o (n1954) );
@@ -1939,7 +1939,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n2285( .i (n2284), .o (n2285) );
   buffer buf_n2286( .i (n2285), .o (n2286) );
   buffer buf_n2287( .i (n2286), .o (n2287) );
-  buffer buf_n2288( .i (n2287), .o (n2288) );
+  inverter inv_n2288( .i (n2287), .o (n2288) );
   buffer buf_n818( .i (n817), .o (n818) );
   buffer buf_n819( .i (n818), .o (n819) );
   assign n2289 = ~n1033 & n1307 ;
@@ -2845,7 +2845,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n3050( .i (n3049), .o (n3050) );
   buffer buf_n3051( .i (n3050), .o (n3051) );
   buffer buf_n3052( .i (n3051), .o (n3052) );
-  buffer buf_n3053( .i (n3052), .o (n3053) );
+  inverter inv_n3053( .i (n3052), .o (n3053) );
   buffer buf_n530( .i (n529), .o (n530) );
   buffer buf_n531( .i (n530), .o (n531) );
   buffer buf_n532( .i (n531), .o (n532) );
@@ -2932,7 +2932,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n3059( .i (n3058), .o (n3059) );
   buffer buf_n3060( .i (n3059), .o (n3060) );
   buffer buf_n3061( .i (n3060), .o (n3061) );
-  buffer buf_n3062( .i (n3061), .o (n3062) );
+  inverter inv_n3062( .i (n3061), .o (n3062) );
   assign n3063 = n2078 & n3016 ;
   buffer buf_n3064( .i (n3063), .o (n3064) );
   assign n3065 = n3031 & ~n3064 ;
@@ -3062,7 +3062,7 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   buffer buf_n3102( .i (n3101), .o (n3102) );
   assign n3103 = n3090 & n3102 ;
   assign n3104 = n3090 | n3102 ;
-  assign n3105 = ~n3103 & n3104 ;
+  assign n3105 = n3103 | ~n3104 ;
   buffer buf_n3095( .i (n3094), .o (n3095) );
   buffer buf_n3096( .i (n3095), .o (n3096) );
   assign n3106 = n3088 | n3096 ;
@@ -3070,26 +3070,26 @@ module top( G1 , G10 , G11 , G12 , G13 , G14 , G15 , G16 , G17 , G18 , G19 , G2 
   assign n3108 = n3106 & ~n3107 ;
   buffer buf_n3109( .i (n3108), .o (n3109) );
   buffer buf_n3110( .i (n3109), .o (n3110) );
-  assign G3519 = ~n742 ;
-  assign G3520 = ~n794 ;
-  assign G3521 = ~n883 ;
+  assign G3519 = n742 ;
+  assign G3520 = n794 ;
+  assign G3521 = n883 ;
   assign G3522 = n955 ;
   assign G3523 = n1024 ;
   assign G3524 = n1503 ;
   assign G3525 = n1561 ;
   assign G3526 = n1670 ;
   assign G3527 = n1751 ;
-  assign G3528 = ~n1951 ;
+  assign G3528 = n1951 ;
   assign G3529 = n2089 ;
-  assign G3530 = ~n2288 ;
+  assign G3530 = n2288 ;
   assign G3531 = n2508 ;
   assign G3532 = n2601 ;
   assign G3533 = n2697 ;
   assign G3534 = n2819 ;
   assign G3535 = n2947 ;
   assign G3536 = n3027 ;
-  assign G3537 = ~n3053 ;
-  assign G3538 = ~n3062 ;
-  assign G3539 = ~n3105 ;
+  assign G3537 = n3053 ;
+  assign G3538 = n3062 ;
+  assign G3539 = n3105 ;
   assign G3540 = n3110 ;
 endmodule
