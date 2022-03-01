@@ -2121,7 +2121,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n2626( .i (n2625), .o (n2626) );
   buffer buf_n2627( .i (n2626), .o (n2627) );
   buffer buf_n2628( .i (n2627), .o (n2628) );
-  buffer buf_n2629( .i (n2628), .o (n2629) );
+  inverter inv_n2629( .i (n2628), .o (n2629) );
   buffer buf_n1188( .i (n1187), .o (n1188) );
   buffer buf_n1189( .i (n1188), .o (n1189) );
   buffer buf_n1190( .i (n1189), .o (n1190) );
@@ -2670,7 +2670,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n2783( .i (n2782), .o (n2783) );
   buffer buf_n2784( .i (n2783), .o (n2784) );
   buffer buf_n2785( .i (n2784), .o (n2785) );
-  buffer buf_n2786( .i (n2785), .o (n2786) );
+  inverter inv_n2786( .i (n2785), .o (n2786) );
   buffer buf_n2787( .i (n1196), .o (n2787) );
   assign n2788 = ~n784 & n2787 ;
   assign n2789 = ( ~n1062 & n1198 ) | ( ~n1062 & n2788 ) | ( n1198 & n2788 ) ;
@@ -2811,7 +2811,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n2922( .i (n2921), .o (n2922) );
   buffer buf_n2923( .i (n2922), .o (n2923) );
   buffer buf_n2924( .i (n2923), .o (n2924) );
-  buffer buf_n2925( .i (n2924), .o (n2925) );
+  inverter inv_n2925( .i (n2924), .o (n2925) );
   buffer buf_n2684( .i (n2683), .o (n2684) );
   buffer buf_n2685( .i (n2684), .o (n2685) );
   buffer buf_n1725( .i (n1724), .o (n1725) );
@@ -2931,13 +2931,13 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   assign y13 = n2370 ;
   assign y14 = n2401 ;
   assign y15 = n2428 ;
-  assign y16 = ~n2629 ;
+  assign y16 = n2629 ;
   assign y17 = n2644 ;
   assign y18 = n2655 ;
   assign y19 = n2666 ;
   assign y20 = n2677 ;
   assign y21 = n2692 ;
-  assign y22 = ~n2786 ;
-  assign y23 = ~n2925 ;
+  assign y22 = n2786 ;
+  assign y23 = n2925 ;
   assign y24 = n2938 ;
 endmodule

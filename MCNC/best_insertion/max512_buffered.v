@@ -1661,11 +1661,11 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , y0 , y1 , y2 , y3 , y4 
   assign n1658 = ( n1596 & ~n1597 ) | ( n1596 & n1657 ) | ( ~n1597 & n1657 ) ;
   assign n1659 = n1565 | n1658 ;
   assign n1660 = ( n1133 & n1526 ) | ( n1133 & ~n1659 ) | ( n1526 & ~n1659 ) ;
-  assign n1661 = ~n1134 & n1660 ;
+  assign n1661 = n1134 | ~n1660 ;
   assign y0 = n238 ;
   assign y1 = n336 ;
   assign y2 = n542 ;
   assign y3 = n779 ;
   assign y4 = n1101 ;
-  assign y5 = ~n1661 ;
+  assign y5 = n1661 ;
 endmodule

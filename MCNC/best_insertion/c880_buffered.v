@@ -273,7 +273,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n1232( .i (n1231), .o (n1232) );
   buffer buf_n1233( .i (n1232), .o (n1233) );
   buffer buf_n1234( .i (n1233), .o (n1234) );
-  buffer buf_n1235( .i (n1234), .o (n1235) );
+  inverter inv_n1235( .i (n1234), .o (n1235) );
   buffer buf_n175( .i (n174), .o (n175) );
   buffer buf_n152( .i (x10), .o (n152) );
   buffer buf_n153( .i (n152), .o (n153) );
@@ -315,7 +315,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n1271( .i (n1270), .o (n1271) );
   buffer buf_n1272( .i (n1271), .o (n1272) );
   buffer buf_n1273( .i (n1272), .o (n1273) );
-  buffer buf_n1274( .i (n1273), .o (n1274) );
+  inverter inv_n1274( .i (n1273), .o (n1274) );
   assign n1275 = n115 & n180 ;
   assign n1276 = n153 & n1275 ;
   buffer buf_n1277( .i (n1276), .o (n1277) );
@@ -355,7 +355,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n1311( .i (n1310), .o (n1311) );
   buffer buf_n1312( .i (n1311), .o (n1312) );
   buffer buf_n1313( .i (n1312), .o (n1313) );
-  buffer buf_n1314( .i (n1313), .o (n1314) );
+  inverter inv_n1314( .i (n1313), .o (n1314) );
   assign n1315 = n116 & n153 ;
   assign n1316 = n122 & n1315 ;
   buffer buf_n1317( .i (n1316), .o (n1317) );
@@ -394,7 +394,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n1350( .i (n1349), .o (n1350) );
   buffer buf_n1351( .i (n1350), .o (n1351) );
   buffer buf_n1352( .i (n1351), .o (n1352) );
-  buffer buf_n1353( .i (n1352), .o (n1353) );
+  inverter inv_n1353( .i (n1352), .o (n1353) );
   buffer buf_n183( .i (x19), .o (n183) );
   buffer buf_n184( .i (n183), .o (n184) );
   buffer buf_n188( .i (x22), .o (n188) );
@@ -475,7 +475,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n1426( .i (n1425), .o (n1426) );
   buffer buf_n1427( .i (n1426), .o (n1427) );
   buffer buf_n1428( .i (n1427), .o (n1428) );
-  buffer buf_n1429( .i (n1428), .o (n1429) );
+  inverter inv_n1429( .i (n1428), .o (n1429) );
   buffer buf_n107( .i (n106), .o (n107) );
   buffer buf_n108( .i (n107), .o (n108) );
   buffer buf_n127( .i (x8), .o (n127) );
@@ -2502,12 +2502,12 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   assign y2 = n1115 ;
   assign y3 = n1156 ;
   assign y4 = n1195 ;
-  assign y5 = ~n1235 ;
-  assign y6 = ~n1274 ;
-  assign y7 = ~n1314 ;
-  assign y8 = ~n1353 ;
+  assign y5 = n1235 ;
+  assign y6 = n1274 ;
+  assign y7 = n1314 ;
+  assign y8 = n1353 ;
   assign y9 = n1393 ;
-  assign y10 = ~n1429 ;
+  assign y10 = n1429 ;
   assign y11 = n1468 ;
   assign y12 = n1509 ;
   assign y13 = n1549 ;

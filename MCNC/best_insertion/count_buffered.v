@@ -51,7 +51,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n363( .i (n362), .o (n363) );
   buffer buf_n364( .i (n363), .o (n364) );
   buffer buf_n365( .i (n364), .o (n365) );
-  buffer buf_n366( .i (n365), .o (n366) );
+  inverter inv_n366( .i (n365), .o (n366) );
   buffer buf_n78( .i (x14), .o (n78) );
   buffer buf_n79( .i (n78), .o (n79) );
   buffer buf_n80( .i (n79), .o (n80) );
@@ -90,7 +90,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n389( .i (n388), .o (n389) );
   buffer buf_n390( .i (n389), .o (n390) );
   buffer buf_n391( .i (n390), .o (n391) );
-  buffer buf_n392( .i (n391), .o (n392) );
+  inverter inv_n392( .i (n391), .o (n392) );
   buffer buf_n75( .i (x13), .o (n75) );
   buffer buf_n76( .i (n75), .o (n76) );
   buffer buf_n77( .i (n76), .o (n77) );
@@ -130,7 +130,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n419( .i (n418), .o (n419) );
   buffer buf_n420( .i (n419), .o (n420) );
   buffer buf_n421( .i (n420), .o (n421) );
-  buffer buf_n422( .i (n421), .o (n422) );
+  inverter inv_n422( .i (n421), .o (n422) );
   buffer buf_n118( .i (n117), .o (n118) );
   buffer buf_n147( .i (x22), .o (n147) );
   buffer buf_n148( .i (n147), .o (n148) );
@@ -169,7 +169,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n448( .i (n447), .o (n448) );
   buffer buf_n449( .i (n448), .o (n449) );
   buffer buf_n450( .i (n449), .o (n450) );
-  buffer buf_n451( .i (n450), .o (n451) );
+  inverter inv_n451( .i (n450), .o (n451) );
   buffer buf_n69( .i (x11), .o (n69) );
   buffer buf_n70( .i (n69), .o (n70) );
   buffer buf_n71( .i (n70), .o (n71) );
@@ -212,7 +212,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n476( .i (n475), .o (n476) );
   buffer buf_n477( .i (n476), .o (n477) );
   buffer buf_n478( .i (n477), .o (n478) );
-  buffer buf_n479( .i (n478), .o (n479) );
+  inverter inv_n479( .i (n478), .o (n479) );
   buffer buf_n66( .i (x10), .o (n66) );
   buffer buf_n67( .i (n66), .o (n67) );
   buffer buf_n68( .i (n67), .o (n68) );
@@ -255,7 +255,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n506( .i (n505), .o (n506) );
   buffer buf_n507( .i (n506), .o (n507) );
   buffer buf_n508( .i (n507), .o (n508) );
-  buffer buf_n509( .i (n508), .o (n509) );
+  inverter inv_n509( .i (n508), .o (n509) );
   buffer buf_n121( .i (n120), .o (n121) );
   buffer buf_n122( .i (n121), .o (n122) );
   buffer buf_n123( .i (n122), .o (n123) );
@@ -303,7 +303,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n536( .i (n535), .o (n536) );
   buffer buf_n537( .i (n536), .o (n537) );
   buffer buf_n538( .i (n537), .o (n538) );
-  buffer buf_n539( .i (n538), .o (n539) );
+  inverter inv_n539( .i (n538), .o (n539) );
   buffer buf_n60( .i (x8), .o (n60) );
   buffer buf_n61( .i (n60), .o (n61) );
   buffer buf_n62( .i (n61), .o (n62) );
@@ -352,7 +352,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n564( .i (n563), .o (n564) );
   buffer buf_n565( .i (n564), .o (n565) );
   buffer buf_n566( .i (n565), .o (n566) );
-  buffer buf_n567( .i (n566), .o (n567) );
+  inverter inv_n567( .i (n566), .o (n567) );
   buffer buf_n57( .i (x7), .o (n57) );
   buffer buf_n58( .i (n57), .o (n58) );
   buffer buf_n59( .i (n58), .o (n59) );
@@ -399,7 +399,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n593( .i (n592), .o (n593) );
   buffer buf_n594( .i (n593), .o (n594) );
   buffer buf_n595( .i (n594), .o (n595) );
-  buffer buf_n596( .i (n595), .o (n596) );
+  inverter inv_n596( .i (n595), .o (n596) );
   buffer buf_n126( .i (n125), .o (n126) );
   buffer buf_n127( .i (n126), .o (n127) );
   buffer buf_n128( .i (n127), .o (n128) );
@@ -452,7 +452,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n623( .i (n622), .o (n623) );
   buffer buf_n624( .i (n623), .o (n624) );
   buffer buf_n625( .i (n624), .o (n625) );
-  buffer buf_n626( .i (n625), .o (n626) );
+  inverter inv_n626( .i (n625), .o (n626) );
   buffer buf_n51( .i (x5), .o (n51) );
   buffer buf_n52( .i (n51), .o (n52) );
   buffer buf_n53( .i (n52), .o (n53) );
@@ -504,7 +504,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n653( .i (n652), .o (n653) );
   buffer buf_n654( .i (n653), .o (n654) );
   buffer buf_n655( .i (n654), .o (n655) );
-  buffer buf_n656( .i (n655), .o (n656) );
+  inverter inv_n656( .i (n655), .o (n656) );
   buffer buf_n48( .i (x4), .o (n48) );
   buffer buf_n49( .i (n48), .o (n49) );
   buffer buf_n50( .i (n49), .o (n50) );
@@ -559,7 +559,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   assign n683 = n675 & ~n682 ;
   buffer buf_n684( .i (n683), .o (n684) );
   buffer buf_n685( .i (n684), .o (n685) );
-  buffer buf_n686( .i (n685), .o (n686) );
+  inverter inv_n686( .i (n685), .o (n686) );
   buffer buf_n131( .i (n130), .o (n131) );
   buffer buf_n132( .i (n131), .o (n132) );
   buffer buf_n133( .i (n132), .o (n133) );
@@ -618,7 +618,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n714( .i (n713), .o (n714) );
   assign n715 = ( ~n694 & n695 ) | ( ~n694 & n714 ) | ( n695 & n714 ) ;
   assign n716 = ~n133 & n715 ;
-  buffer buf_n717( .i (n716), .o (n717) );
+  inverter inv_n717( .i (n716), .o (n717) );
   buffer buf_n42( .i (x2), .o (n42) );
   buffer buf_n43( .i (n42), .o (n43) );
   buffer buf_n44( .i (n43), .o (n44) );
@@ -670,7 +670,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   assign n742 = ( n279 & n740 ) | ( n279 & ~n741 ) | ( n740 & ~n741 ) ;
   assign n743 = ( n105 & n132 ) | ( n105 & ~n742 ) | ( n132 & ~n742 ) ;
   assign n744 = n737 & ~n743 ;
-  buffer buf_n745( .i (n744), .o (n745) );
+  inverter inv_n745( .i (n744), .o (n745) );
   buffer buf_n39( .i (x1), .o (n39) );
   buffer buf_n40( .i (n39), .o (n40) );
   buffer buf_n41( .i (n40), .o (n41) );
@@ -724,7 +724,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   assign n773 = ~n771 & n772 ;
   assign n774 = ( n105 & n132 ) | ( n105 & ~n773 ) | ( n132 & ~n773 ) ;
   assign n775 = n767 & ~n774 ;
-  buffer buf_n776( .i (n775), .o (n776) );
+  inverter inv_n776( .i (n775), .o (n776) );
   buffer buf_n134( .i (n133), .o (n134) );
   buffer buf_n320( .i (x34), .o (n320) );
   buffer buf_n321( .i (n320), .o (n321) );
@@ -778,21 +778,21 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , 
   buffer buf_n801( .i (n800), .o (n801) );
   buffer buf_n802( .i (n801), .o (n802) );
   assign n803 = ( ~n781 & n782 ) | ( ~n781 & n802 ) | ( n782 & n802 ) ;
-  assign n804 = ~n134 & n803 ;
-  assign y0 = ~n366 ;
-  assign y1 = ~n392 ;
-  assign y2 = ~n422 ;
-  assign y3 = ~n451 ;
-  assign y4 = ~n479 ;
-  assign y5 = ~n509 ;
-  assign y6 = ~n539 ;
-  assign y7 = ~n567 ;
-  assign y8 = ~n596 ;
-  assign y9 = ~n626 ;
-  assign y10 = ~n656 ;
-  assign y11 = ~n686 ;
-  assign y12 = ~n717 ;
-  assign y13 = ~n745 ;
-  assign y14 = ~n776 ;
-  assign y15 = ~n804 ;
+  assign n804 = n134 | ~n803 ;
+  assign y0 = n366 ;
+  assign y1 = n392 ;
+  assign y2 = n422 ;
+  assign y3 = n451 ;
+  assign y4 = n479 ;
+  assign y5 = n509 ;
+  assign y6 = n539 ;
+  assign y7 = n567 ;
+  assign y8 = n596 ;
+  assign y9 = n626 ;
+  assign y10 = n656 ;
+  assign y11 = n686 ;
+  assign y12 = n717 ;
+  assign y13 = n745 ;
+  assign y14 = n776 ;
+  assign y15 = n804 ;
 endmodule

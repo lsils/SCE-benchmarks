@@ -31,7 +31,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   buffer buf_n27( .i (n26), .o (n27) );
   buffer buf_n28( .i (n27), .o (n28) );
   buffer buf_n29( .i (n28), .o (n29) );
-  buffer buf_n30( .i (n29), .o (n30) );
+  inverter inv_n30( .i (n29), .o (n30) );
   buffer buf_n52( .i (x2), .o (n52) );
   buffer buf_n53( .i (n52), .o (n53) );
   buffer buf_n54( .i (n53), .o (n54) );
@@ -226,7 +226,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n246 = ~n88 & n245 ;
   assign n247 = ( n89 & n234 ) | ( n89 & n246 ) | ( n234 & n246 ) ;
   assign n248 = n28 | n247 ;
-  assign n249 = ( n51 & ~n224 ) | ( n51 & n248 ) | ( ~n224 & n248 ) ;
+  assign n249 = ( ~n51 & n224 ) | ( ~n51 & ~n248 ) | ( n224 & ~n248 ) ;
   assign n250 = n81 | n118 ;
   buffer buf_n251( .i (n98), .o (n251) );
   assign n252 = n80 & n251 ;
@@ -411,7 +411,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n425 = ( n397 & n423 ) | ( n397 & ~n424 ) | ( n423 & ~n424 ) ;
   assign n426 = ( ~n27 & n388 ) | ( ~n27 & n425 ) | ( n388 & n425 ) ;
   assign n427 = n381 & n426 ;
-  assign n428 = ( n29 & n382 ) | ( n29 & ~n427 ) | ( n382 & ~n427 ) ;
+  assign n428 = ( ~n29 & ~n382 ) | ( ~n29 & n427 ) | ( ~n382 & n427 ) ;
   buffer buf_n68( .i (n67), .o (n68) );
   buffer buf_n69( .i (n68), .o (n69) );
   buffer buf_n70( .i (n69), .o (n70) );
@@ -547,7 +547,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n562 = ( n505 & ~n522 ) | ( n505 & n561 ) | ( ~n522 & n561 ) ;
   assign n563 = ~n506 & n562 ;
   assign n564 = n28 | n563 ;
-  assign n565 = ( n29 & ~n494 ) | ( n29 & n564 ) | ( ~n494 & n564 ) ;
+  assign n565 = ( ~n29 & n494 ) | ( ~n29 & ~n564 ) | ( n494 & ~n564 ) ;
   assign n566 = ( ~n19 & n183 ) | ( ~n19 & n496 ) | ( n183 & n496 ) ;
   assign n567 = n20 | n566 ;
   assign n568 = n529 | n567 ;
@@ -558,7 +558,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   buffer buf_n573( .i (n572), .o (n573) );
   buffer buf_n574( .i (n573), .o (n574) );
   buffer buf_n575( .i (n574), .o (n575) );
-  buffer buf_n576( .i (n575), .o (n576) );
+  inverter inv_n576( .i (n575), .o (n576) );
   buffer buf_n577( .i (n553), .o (n577) );
   assign n578 = n529 & ~n577 ;
   assign n579 = ~n155 & n578 ;
@@ -577,7 +577,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   buffer buf_n592( .i (n26), .o (n592) );
   buffer buf_n593( .i (n592), .o (n593) );
   assign n594 = n591 | n593 ;
-  buffer buf_n595( .i (n594), .o (n595) );
+  inverter inv_n595( .i (n594), .o (n595) );
   assign n596 = ( n484 & ~n529 ) | ( n484 & n577 ) | ( ~n529 & n577 ) ;
   buffer buf_n597( .i (n596), .o (n597) );
   buffer buf_n598( .i (n597), .o (n598) );
@@ -594,7 +594,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n605 = ( n70 & n191 ) | ( n70 & ~n603 ) | ( n191 & ~n603 ) ;
   assign n606 = n604 | n605 ;
   buffer buf_n607( .i (n593), .o (n607) );
-  assign n608 = n606 | n607 ;
+  assign n608 = ~n606 & ~n607 ;
   assign n609 = ( n76 & n113 ) | ( n76 & ~n147 ) | ( n113 & ~n147 ) ;
   buffer buf_n610( .i (n609), .o (n610) );
   buffer buf_n615( .i (n77), .o (n615) );
@@ -635,7 +635,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n644 = ( n48 & ~n641 ) | ( n48 & n643 ) | ( ~n641 & n643 ) ;
   assign n645 = n642 | n644 ;
   buffer buf_n646( .i (n645), .o (n646) );
-  buffer buf_n647( .i (n646), .o (n647) );
+  inverter inv_n647( .i (n646), .o (n647) );
   assign n648 = ~n331 & n552 ;
   buffer buf_n649( .i (n648), .o (n649) );
   assign n652 = n577 & ~n649 ;
@@ -686,7 +686,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n695 = n69 & ~n693 ;
   assign n696 = ( n658 & ~n694 ) | ( n658 & n695 ) | ( ~n694 & n695 ) ;
   assign n697 = n50 | n696 ;
-  assign n698 = n607 | n697 ;
+  assign n698 = ~n607 & ~n697 ;
   assign n699 = ( n77 & ~n96 ) | ( n77 & n131 ) | ( ~n96 & n131 ) ;
   buffer buf_n700( .i (n699), .o (n700) );
   assign n705 = ( ~n150 & n630 ) | ( ~n150 & n700 ) | ( n630 & n700 ) ;
@@ -761,7 +761,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n774 = n762 | n773 ;
   assign n775 = ( n757 & ~n758 ) | ( n757 & n774 ) | ( ~n758 & n774 ) ;
   assign n776 = ~n593 & n775 ;
-  assign n777 = ( n731 & n732 ) | ( n731 & ~n776 ) | ( n732 & ~n776 ) ;
+  assign n777 = ( ~n731 & ~n732 ) | ( ~n731 & n776 ) | ( ~n732 & n776 ) ;
   assign n778 = ( n530 & ~n766 ) | ( n530 & n768 ) | ( ~n766 & n768 ) ;
   assign n779 = ( n485 & ~n650 ) | ( n485 & n768 ) | ( ~n650 & n768 ) ;
   assign n780 = ~n778 & n779 ;
@@ -869,7 +869,7 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n877 = ~n875 & n876 ;
   assign n878 = ( ~n592 & n865 ) | ( ~n592 & n877 ) | ( n865 & n877 ) ;
   assign n879 = n827 & n878 ;
-  assign n880 = ( n607 & n828 ) | ( n607 & ~n879 ) | ( n828 & ~n879 ) ;
+  assign n880 = ( ~n607 & ~n828 ) | ( ~n607 & n879 ) | ( ~n828 & n879 ) ;
   buffer buf_n881( .i (n154), .o (n881) );
   assign n882 = ( ~n799 & n813 ) | ( ~n799 & n881 ) | ( n813 & n881 ) ;
   assign n883 = ~n684 & n848 ;
@@ -951,21 +951,21 @@ module top( x0 , x1 , x2 , x3 , x4 , x5 , x6 , x7 , y0 , y1 , y2 , y3 , y4 , y5 
   assign n947 = n942 | n946 ;
   assign n948 = ( n592 & n921 ) | ( n592 & ~n947 ) | ( n921 & ~n947 ) ;
   assign n949 = n907 | n948 ;
-  assign n950 = ( n607 & ~n908 ) | ( n607 & n949 ) | ( ~n908 & n949 ) ;
-  assign y0 = ~n30 ;
-  assign y1 = ~n30 ;
-  assign y2 = ~n30 ;
+  assign n950 = ( ~n607 & n908 ) | ( ~n607 & ~n949 ) | ( n908 & ~n949 ) ;
+  assign y0 = n30 ;
+  assign y1 = n30 ;
+  assign y2 = n30 ;
   assign y3 = n198 ;
-  assign y4 = ~n249 ;
+  assign y4 = n249 ;
   assign y5 = n330 ;
-  assign y6 = ~n428 ;
-  assign y7 = ~n565 ;
-  assign y8 = ~n576 ;
-  assign y9 = ~n595 ;
-  assign y10 = ~n608 ;
-  assign y11 = ~n647 ;
-  assign y12 = ~n698 ;
-  assign y13 = ~n777 ;
-  assign y14 = ~n880 ;
-  assign y15 = ~n950 ;
+  assign y6 = n428 ;
+  assign y7 = n565 ;
+  assign y8 = n576 ;
+  assign y9 = n595 ;
+  assign y10 = n608 ;
+  assign y11 = n647 ;
+  assign y12 = n698 ;
+  assign y13 = n777 ;
+  assign y14 = n880 ;
+  assign y15 = n950 ;
 endmodule
