@@ -30,7 +30,7 @@ These benchmarks were generated (optimized) by the authors of [1] using Yosys. W
 ## Assumption: \{true, true, true, 4\}
 
 |  benchmark |  #B/S |  #JJs | depth |
-| ---------- | ----- | ----- | ------ |
+| ---------- | ----- | ----- | ----- |
 |     adder1 |    16 |    74 |     8 |
 |     adder8 |   371 |  1204 |    33 |
 |      mult8 |  1869 |  6372 |    71 |
@@ -52,6 +52,58 @@ These benchmarks were generated (optimized) by the authors of [1] using Yosys. W
 |   sorter32 |   480 |  3840 |    30 |
 |   sorter48 |   880 |  7040 |    35 |
 |      alu32 | 15040 | 39158 |   173 |
+
+## Assumption: \{true, true, false, 4\}
+
+|  benchmark |  #B/S |  #JJs | depth |
+| ---------- | ----- | ----- | ----- |
+|     adder1 |    16 |    74 |     8 |
+|     adder8 |   264 |   990 |    33 |
+|      mult8 |  1412 |  5458 |    71 |
+|  counter16 |    58 |   290 |    17 |
+|  counter32 |   144 |   780 |    23 |
+|  counter64 |   336 |  1842 |    30 |
+| counter128 |   732 |  4032 |    38 |
+|        c17 |    11 |    58 |     5 |
+|       c432 |   813 |  2352 |    38 |
+|       c499 |  1240 |  4802 |    31 |
+|       c880 |  1016 |  3868 |    41 |
+|      c1355 |  1230 |  4794 |    31 |
+|      c1908 |  1229 |  4192 |    35 |
+|      c2670 |  1220 |  4648 |    30 |
+|      c3540 |  1792 |  8348 |    55 |
+|      c5315 |  3924 | 15660 |    42 |
+|      c6288 |  7596 | 26412 |   180 |
+|      c7552 |  4690 | 17744 |    66 |
+|   sorter32 |   480 |  3840 |    30 |
+|   sorter48 |   864 |  7008 |    35 |
+|      alu32 | 10025 | 29128 |   173 |
+
+## Assumption: \{true, false, false, 4\}
+
+|  benchmark | #B/S |  #JJs | depth |
+| ---------- | ---- | ----- | ----- |
+|     adder1 |   14 |    70 |     8 |
+|     adder8 |  128 |   718 |    33 |
+|      mult8 | 1412 |  5458 |    71 |
+|  counter16 |   46 |   266 |    17 |
+|  counter32 |  120 |   732 |    23 |
+|  counter64 |  288 |  1746 |    30 |
+| counter128 |  636 |  3840 |    38 |
+|        c17 |    6 |    48 |     5 |
+|       c432 |  500 |  1726 |    37 |
+|       c499 | 1154 |  4630 |    29 |
+|       c880 |  804 |  3444 |    41 |
+|      c1355 | 1158 |  4650 |    29 |
+|      c1908 | 1216 |  4166 |    36 |
+|      c2670 |  448 |  3104 |    30 |
+|      c3540 | 1653 |  8070 |    55 |
+|      c5315 | 2455 | 12722 |    40 |
+|      c6288 | 6697 | 24614 |   179 |
+|      c7552 | 3914 | 16192 |    66 |
+|   sorter32 |  480 |  3840 |    30 |
+|   sorter48 |  864 |  7008 |    35 |
+|      alu32 | 9447 | 27972 |   173 |
 
 ### Buffer and splitter insertion results without logic optimization [7]
 
