@@ -49,7 +49,7 @@ Different benchmark suites and best optimization results under various technolog
 These benchmarks are used for experiments in [2,3,5,6]. The initial MIG circuits were obtained by first mapping into 4-LUT networks using ABC command `&if -a -K 4`, then rewriting each LUT with optimum MIGs looked up in a database, and finally restricting the fanout size of each node to at most 16. (See Section 3.1 of [2].)
 
 ### ISCAS'85 benchmarks
-These benchmarks are used for experiments in [1,4,7]. We obtained the original benchmarks from the authors of [3].
+These benchmarks are used for experiments in [1,4,7]. We obtained the original benchmarks from the authors of [4].
 
 ## Types of best results
 There are two types of "best AQFP results" presented in this repository. 
