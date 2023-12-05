@@ -27,9 +27,7 @@ The initial MIG circuits were obtained by first mapping into 4-LUT networks usin
 
 ### Logic optimization results considering buffer and splitter costs [8]
 
-In the following, we present the optimized results for MCNC benchmarks considering majority-3 gates in the netlist under the assumption that neither path-balancing nor branching is required for PIs, but POs need to be path-balanced.
-
-|Benchmark |#gates | #buffers | #JJs   | depth | 
+|Benchmark |#MAJ3 | #buffers | #JJs   | depth | 
 | ------- | ----- | -------- | ----- | ------|
 5xp1  |  38   |    70   | 368   | 9     | 
 c1908 |  328  |    1233 | 4434  | 29    | 
