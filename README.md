@@ -36,7 +36,7 @@ There are two types of "best AQFP results" presented in this repository.
 
 **Buffer and splitter insertion without logic optimization**
 
-Without any logic optimization, i.e., without changing the interconnections of logic gates, buffers and splitters are inserted into the network to legalize them for AQFP. These results were obtained by adopting the better initial scheduling among ASAP and ALAP, and then running the chunked-movement heuristic optimization until convergence. [7] The implementation is available in `mockturtle` in header [`buffer_insertion`](https://github.com/lsils/mockturtle/blob/master/include/mockturtle/algorithms/aqfp/buffer_insertion.hpp).
+Without any logic optimization, i.e., without changing the interconnections of logic gates, buffers and splitters are inserted into the network to legalize them for AQFP. Heuristic optimization techniques, such as chunked movement and retiming, are applied after an initial insertion is obtained.
 
 The buffer insertion results can be verified using the [`buffer_verification`](https://github.com/lsils/mockturtle/blob/master/include/mockturtle/algorithms/aqfp/buffer_verification.hpp) algorithm in `mockturtle`.
 
