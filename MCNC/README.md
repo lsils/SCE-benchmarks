@@ -48,26 +48,3 @@ prom2 |  1957 |    1758 | 15258 | 16    |
 sqr6  |  86   |    97   | 710   | 9     | 
 x1dn  |  84   |    105  | 714   | 10    | 
 
-### Logic optimization results considering buffer and splitter costs, using both MAJ-3 and MAJ-5 [5]
-In the following, we present the optimized results for MCNC benchmarks allowing both majority-3 and majority-5 gates in the netlist under the assumption that neither path-balancing nor branching is required for PIs, but POs need to be path-balanced.
-
-| Benchmark name | Levels | JJ count |
-| ------------- | ------------- | ------------- |
-5xp1 | 8 | 730 |
-c1908 | 32 | 4498 | 
-c432 | 35 | 2696 |
-c5315 | 29 | 14850 |
-c880 | 20 | 3402 |
-chkn | 13 | 2988 |
-count | 11 | 1326 |
-dist | 10 | 3480 |
-in5 | 12 | 3116 |
-in6 | 8 | 2552 |
-k2 | 16 | 14372 |
-m3 | 9 | 2680 |
-max512 | 12 | 4636 |
-misex3 | 14 | 10584 |
-mlp4 | 10 | 2998 |
-prom2 | 13 | 24586 |
-sqr6 | 7 | 902 |
-x1dn | 10 | 1010 |
