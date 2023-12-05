@@ -19,28 +19,8 @@ Splitter (1-to-2, 1-to-3, 1-to-4) | 2 | 1 |
 2-input AND | 6 | 1 |
 2-input OR  | 6 | 1 |
 
-## Different technology assumptions
-
-Depending on how the registers are implemented, there can be different assumptions on whether primary inputs (PIs) and primary outputs (POs) need to be path-balanced and whether PIs need to be branched. Also, splitter cells of different splitting capacities may be available.
-
-More specifically, a list of assumptive parameters we consider is:
-```c++
-struct aqfp_assumptions
-{
-  /*! \brief Whether PIs need to be branched with splitters. */
-  bool branch_pis;
-
-  /*! \brief Whether PIs need to be path-balanced. */
-  bool balance_pis;
-
-  /*! \brief Whether POs need to be path-balanced. */
-  bool balance_pos;
-
-  /*! \brief The maximum number of fanouts each splitter can have. */
-  uint32_t splitter_capacity;
-};
-```
-Whenever assumptions are made and mentioned in this repository, they are listed as the ordered values of the above list. For example, \{true, true, false, 4\} means PIs are branched, PIs are balanced, POs are not balanced, and splitters have max fanout of 4.
+## Technology assumptions
+PIs and POs are balanced, and splitters have a splitting capacity (maximum fanout) of 4.
 
 ## Benchmark suites
 Different benchmark suites and best optimization results under various technology assumptions are collected in this repository.
@@ -66,10 +46,11 @@ In this category, there is no restriction on the methods used as long as the res
 
 ## References
 1. "A Buffer and Splitter Insertion Framework for Adiabatic Quantum-Flux-Parametron Superconducting Circuits" by Ruizhe Cai, Olivia Chen, Ao Ren, Ning Liu, Nobuyuki Yoshikawa, and Yanzhi Wang (ICCD 2019).
-1. "Algebraic and Boolean Optimization Methods for AQFP Superconducting Circuits" by Eleonora Testa, Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (ASP-DAC 2021). 
-1. "Irredundant Buffer and Splitter Insertion and Scheduling-Based Optimization for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (IWLS 2021).
-1. "An Optimal Algorithm for Splitter and Buffer Insertion in Adiabatic Quantum-Flux-Parametron Circuits" by Chao-Yuan Huang, Yi-Chen Chang, Ming-Jer Tsai, and Tsung-Yi Ho (ICCAD 2021).
-1. "Optimizing Adiabatic Quantum-Flux-Parametron (AQFP) Circuits using an Exact Database" by Dewmini Sudara Marakkalage, Heinz Riener, and Giovanni De Micheli (NANOARCH 2021).
-1. "Majority-based Design Flow for AQFP Superconducting Family" by Giulia Meuli, Vinicius Possani, Rajinder Singh, Siang-Yun Lee, Alessandro Tempia Calvino, Dewmini Sudara Marakkalage, Patrick Vuillod, Luca Amaru, Scott Chase, Jamil Kawa, and Giovanni De Micheli (DATE 2022).
-1. "Beyond Local Optimality of Buffer and Splitter Insertion for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (DAC 2022).
+2. "Algebraic and Boolean Optimization Methods for AQFP Superconducting Circuits" by Eleonora Testa, Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (ASP-DAC 2021). 
+3. "Irredundant Buffer and Splitter Insertion and Scheduling-Based Optimization for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (IWLS 2021).
+4. "An Optimal Algorithm for Splitter and Buffer Insertion in Adiabatic Quantum-Flux-Parametron Circuits" by Chao-Yuan Huang, Yi-Chen Chang, Ming-Jer Tsai, and Tsung-Yi Ho (ICCAD 2021).
+5. "Optimizing Adiabatic Quantum-Flux-Parametron (AQFP) Circuits using an Exact Database" by Dewmini Sudara Marakkalage, Heinz Riener, and Giovanni De Micheli (NANOARCH 2021).
+6. "Majority-based Design Flow for AQFP Superconducting Family" by Giulia Meuli, Vinicius Possani, Rajinder Singh, Siang-Yun Lee, Alessandro Tempia Calvino, Dewmini Sudara Marakkalage, Patrick Vuillod, Luca Amaru, Scott Chase, Jamil Kawa, and Giovanni De Micheli (DATE 2022).
+7. "Beyond Local Optimality of Buffer and Splitter Insertion for AQFP Circuits" by Siang-Yun Lee, Heinz Riener, and Giovanni De Micheli (DAC 2022).
+8. "Technology Legalization and Optimization for Adiabatic Quantum-Flux Parametron" by Siang-Yun Lee, Alessandro Tempia Calvino, Heinz Riener, and Giovanni De Micheli (under review).
 
