@@ -27,7 +27,7 @@ These benchmarks were generated (optimized) by the authors of [1] using Yosys. W
 |   sorter48 |    880 |    20 |      3 |
 |      alu32 |   1513 |   100 |    128 |
 
-### Buffer and splitter insertion results without logic optimization
+### Buffer and splitter insertion results without logic optimization [8]
 
 |  Benchmark | #buffers |  #JJs | Depth | Time (s) |
 | ---------- | -------- | ----- | ----- | -------- |
