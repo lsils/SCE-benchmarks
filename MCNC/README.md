@@ -2,8 +2,6 @@
 
 The initial MIG circuits were obtained by first mapping into 4-LUT networks using ABC command `&if -a -K 4`, then rewriting each LUT with optimum MIGs looked up in a database, and finally restricting the fanout size of each node to at most 16. (See Section 3.1 of [2].)
 
-## Assumption: \{true, true, true, 4\}
-
 ### Buffer and splitter insertion results without logic optimization [7]
 
 | benchmark |  #B/S |  #JJs | depth |
@@ -27,31 +25,32 @@ The initial MIG circuits were obtained by first mapping into 4-LUT networks usin
 |      sqr6 |   218 |  1264 |    19 |
 |      x1dn |   366 |  1644 |    19 |
 
-### Logic optimization results considering buffer and splitter costs [5]
+### Logic optimization results considering buffer and splitter costs [8]
 
 In the following, we present the optimized results for MCNC benchmarks considering majority-3 gates in the netlist under the assumption that neither path-balancing nor branching is required for PIs, but POs need to be path-balanced.
 
-| Benchmark name | Levels | JJ count |
-| ------------- | ------------- | ------------- |
-5xp1 | 8 | 742 |
-c1908 | 36 | 5204 | 
-c432 | 36 | 2944 |
-c5315 | 30 | 16312 |
-c880 | 21 | 3678 |
-chkn | 14 | 3398 |
-count | 11 | 1346 |
-dist | 11 | 3990 |
-in5 | 13 | 3754 |
-in6 | 10 | 2952 |
-k2 | 18 | 16306 |
-m3 | 10 | 3016 |
-max512 | 13 | 5334 |
-misex3 | 15 | 12598 |
-mlp4 | 11 | 3326 |
-prom2 | 14 | 27302 |
-sqr6 | 8 | 978 |
-x1dn | 10 | 1148 |
+|Benchmark |#gates | #buffers | #JJs   | depth | 
+| ------- | ----- | -------- | ----- | ------|
+5xp1  |  38   |    70   | 368   | 9     | 
+c1908 |  328  |    1233 | 4434  | 29    | 
+c432  |  184  |    619  | 2342  | 27    | 
+c5315 |  1129 |    3606 | 13986 | 24    | 
+c880  |  278  |    848  | 3364  | 19    | 
+chkn  |  238  |    405  | 2238  | 15    | 
+count |  111  |    318  | 1302  | 11    | 
+dist  |  221  |    249  | 1824  | 14    | 
+in5   |  170  |    291  | 1602  | 13    | 
+in6   |  175  |    329  | 1708  | 12    | 
+k2    |  892  |    1512 | 8376  | 19    | 
+m3    |  194  |    218  | 1600  | 12    | 
+max512|  340  |    350  | 2740  | 14    | 
+misex3|  288  |    453  | 2634  | 17    | 
+mlp4  |  189  |    227  | 1588  | 14    | 
+prom2 |  1957 |    1758 | 15258 | 16    | 
+sqr6  |  86   |    97   | 710   | 9     | 
+x1dn  |  84   |    105  | 714   | 10    | 
 
+### Logic optimization results considering buffer and splitter costs, using both MAJ-3 and MAJ-5 [5]
 In the following, we present the optimized results for MCNC benchmarks allowing both majority-3 and majority-5 gates in the netlist under the assumption that neither path-balancing nor branching is required for PIs, but POs need to be path-balanced.
 
 | Benchmark name | Levels | JJ count |
